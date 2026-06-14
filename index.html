@@ -154,6 +154,21 @@
 </main>
 
 <div id="site-footer"></div>
+
+<button id="back-to-top" aria-label="Zurück nach oben" title="Zurück nach oben">&#8679;</button>
+
 <script src="assets/nav.js"></script>
+<script>
+(function () {
+  const btn = document.getElementById('back-to-top');
+  const nav = document.querySelector('.site-nav') || document.getElementById('site-nav');
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('visible', window.scrollY > 200);
+  }, { passive: true });
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
 </body>
 </html>
