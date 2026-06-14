@@ -139,6 +139,102 @@ a { color: inherit; text-decoration: none; }
   .section-h2 { font-size: 1.6rem; }
 }
 
+/* ── Hero ── */
+.hero {
+  background: var(--dark);
+  padding: 80px 48px 120px;
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1600&q=80')
+              center / cover no-repeat;
+  opacity: 0.18;
+}
+.hero-line {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 5px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+.hero-line-2 {
+  position: absolute;
+  left: 14px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(232,168,0,0.35), transparent);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+.hero-kicker::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--gold);
+}
+.hero-h1 {
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.hero-h1 em {
+  color: var(--gold);
+  font-style: normal;
+  display: block;
+}
+.hero-sub {
+  font-size: 1rem;
+  color: var(--text-muted-dark);
+  line-height: 1.75;
+  margin-bottom: 36px;
+  max-width: 440px;
+}
+.hero-btns { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.hero-stats {
+  position: absolute;
+  right: 48px;
+  bottom: 80px;
+  display: flex;
+  gap: 40px;
+  z-index: 2;
+}
+.stat-num {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+}
+.stat-num span { color: var(--gold); }
+.stat-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .hero { padding: 60px 20px 80px; min-height: auto; }
+  .hero-stats { position: static; margin-top: 40px; gap: 24px; }
+}
+
 /* ── Über uns ── */
 .about {
   background: var(--light);
