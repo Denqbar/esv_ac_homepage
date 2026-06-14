@@ -4,6 +4,9 @@
   <div class="logo">
     <a href="index.html"><img src="assets/logo.png" alt="ESV Aachen Logo"></a>
   </div>
+  <button class="nav-burger" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav-links">
     <a href="index.html#sportarten">Sportarten</a>
     <a href="index.html#vorstand">Vorstand</a>
@@ -28,4 +31,21 @@
 
   document.getElementById('site-nav').innerHTML = nav;
   document.getElementById('site-footer').innerHTML = footer;
+
+  const burger = document.querySelector('.nav-burger');
+  const links = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', function () {
+    const open = links.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      links.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
 })();
