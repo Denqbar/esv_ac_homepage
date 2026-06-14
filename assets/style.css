@@ -138,3 +138,175 @@ a { color: inherit; text-decoration: none; }
   .site-footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
   .section-h2 { font-size: 1.6rem; }
 }
+
+/* ── Über uns ── */
+.about {
+  background: var(--light);
+  padding: 80px 48px 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.about .section-h2 { color: var(--text-on-light); }
+.about .section-p { color: var(--text-muted-light); }
+.about-img-wrap {
+  position: relative;
+  height: 340px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.about-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.about-img-badge {
+  position: absolute;
+  bottom: 18px; left: 18px;
+  background: var(--gold);
+  color: #111;
+  padding: 9px 16px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .about { grid-template-columns: 1fr; padding: 60px 20px; gap: 32px; }
+  .about-img-wrap { height: 240px; }
+}
+
+/* ── Sportarten ── */
+.sports {
+  background: var(--dark);
+  padding: 80px 48px;
+}
+.sports-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.sports-header .section-h2 { color: var(--white); }
+.sport-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.sport-card {
+  background: var(--dark-2);
+  border-top: 3px solid var(--gold);
+  padding: 30px 22px 26px;
+  transition: transform 0.2s;
+}
+.sport-card:hover { transform: translateY(-5px); }
+.sport-icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+.sport-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.sport-detail {
+  font-size: 0.7rem;
+  color: #777;
+  line-height: 1.8;
+}
+.sport-detail strong { color: var(--gold); font-weight: 600; }
+.sport-detail a { color: #777; border-bottom: 1px solid #444; }
+.sport-detail a:hover { color: var(--gold); border-color: var(--gold); }
+@media (max-width: 900px) {
+  .sport-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .sport-grid { grid-template-columns: 1fr; }
+  .sports { padding: 60px 20px; }
+}
+
+/* ── Vorstand ── */
+.vorstand {
+  background: var(--light);
+  padding: 80px 48px;
+}
+.vorstand-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.vorstand-header .section-h2 { color: var(--text-on-light); }
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.board-card {
+  background: var(--white);
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border-bottom: 3px solid var(--gold);
+}
+.board-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  overflow: hidden;
+  margin: 0 auto 18px;
+}
+.board-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.board-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-on-light);
+  margin-bottom: 5px;
+}
+.board-role {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+@media (max-width: 600px) {
+  .board-grid { grid-template-columns: 1fr; max-width: 280px; }
+  .vorstand { padding: 60px 20px; }
+}
+
+/* ── Kontakt ── */
+.kontakt {
+  background: var(--dark-2);
+  padding: 80px 48px;
+  text-align: center;
+}
+.kontakt .section-h2 { color: var(--white); font-size: 2rem; }
+.kontakt-sub {
+  font-size: 0.92rem;
+  color: var(--text-muted-dark);
+  margin-bottom: 30px;
+  line-height: 1.75;
+}
+.kontakt-email {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 3px;
+  margin-bottom: 32px;
+  transition: opacity 0.2s;
+}
+.kontakt-email:hover { opacity: 0.8; }
+.kontakt-address {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .kontakt { padding: 60px 20px; }
+}
