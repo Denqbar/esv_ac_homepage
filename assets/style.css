@@ -310,3 +310,65 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) {
   .kontakt { padding: 60px 20px; }
 }
+
+/* ── Unterseiten (Satzung, Impressum, Datenschutz) ── */
+.subpage-hero {
+  background: var(--dark);
+  padding: 60px 48px 50px;
+  border-bottom: 3px solid var(--gold);
+}
+.subpage-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.subpage-hero .sub-kicker {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.subpage-content {
+  background: var(--light);
+  padding: 64px 48px 80px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.subpage-content h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-on-light);
+  margin: 36px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--gold);
+}
+.subpage-content h2:first-child { margin-top: 0; }
+.subpage-content p {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: var(--text-muted-light);
+  margin-bottom: 12px;
+}
+.subpage-content ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+.subpage-content li {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: var(--text-muted-light);
+  margin-bottom: 4px;
+}
+.satzung-meta {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #ddd;
+  font-size: 0.75rem;
+  color: #999;
+  line-height: 1.8;
+}
+@media (max-width: 768px) {
+  .subpage-hero { padding: 48px 20px 40px; }
+  .subpage-content { padding: 48px 20px 60px; }
+}
