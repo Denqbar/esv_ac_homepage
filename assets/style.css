@@ -48,15 +48,15 @@ a { color: inherit; text-decoration: none; }
 /* ── Diagonale Schnitte ── */
 .cut-to-light {
   height: 60px;
-  background: linear-gradient(to bottom right, var(--dark) 50%, var(--light) 50%);
+  background: linear-gradient(to bottom right, var(--dark) calc(50% - 1px), var(--light) calc(50% + 1px));
 }
 .cut-to-dark {
   height: 60px;
-  background: linear-gradient(to top left, var(--dark-2) 50%, var(--light) 50%);
+  background: linear-gradient(to top left, var(--dark-2) calc(50% - 1px), var(--light) calc(50% + 1px));
 }
 .cut-to-dark-2 {
   height: 60px;
-  background: linear-gradient(to bottom right, var(--dark-2) 50%, var(--light) 50%);
+  background: linear-gradient(to bottom right, var(--dark-2) calc(50% - 1px), var(--light) calc(50% + 1px));
 }
 
 /* ── Abschnitt-Typografie ── */
