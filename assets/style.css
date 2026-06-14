@@ -34,6 +34,23 @@ a { color: inherit; text-decoration: none; }
   top: 0;
   z-index: 100;
 }
+.site-nav::before,
+.site-nav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.site-nav::before {
+  left: 0;
+  width: 5px;
+  background: var(--gold);
+}
+.site-nav::after {
+  left: 14px;
+  width: 2px;
+  background: rgba(232,168,0,0.35);
+}
 .site-nav .logo img { height: 94px; width: auto; }
 .nav-links { display: flex; gap: 32px; align-items: center; }
 .nav-links a {
