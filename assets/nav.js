@@ -2,7 +2,7 @@
   const nav = `
 <nav class="site-nav">
   <div class="logo">
-    <a href="index.html"><img src="assets/logo.svg" alt="ESV Aachen Logo"></a>
+    <a href="index.html"><img src="assets/logo.png" alt="ESV Aachen Logo"></a>
   </div>
   <div class="nav-links">
     <a href="index.html#sportarten">Sportarten</a>
@@ -16,7 +16,7 @@
   const footer = `
 <footer class="site-footer">
   <div class="logo">
-    <a href="index.html"><img src="assets/logo.svg" alt="ESV Aachen Logo"></a>
+    <a href="index.html"><img src="assets/logo.png" alt="ESV Aachen Logo"></a>
   </div>
   <div class="footer-links">
     <a href="satzung.html">Satzung</a>
