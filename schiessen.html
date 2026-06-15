@@ -150,7 +150,9 @@
     .then(function (r) { return r.json(); })
     .then(function (news) {
       var container = document.getElementById('news-list');
-      news.forEach(function (item) {
+      var limit = 5;
+
+      function renderItem(item) {
         var d = new Date(item.datum);
         var datum = d.toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
         var div = document.createElement('div');
@@ -168,7 +170,20 @@
         div.appendChild(titleEl);
         div.appendChild(textEl);
         container.appendChild(div);
-      });
+      }
+
+      news.slice(0, limit).forEach(renderItem);
+
+      if (news.length > limit) {
+        var btn = document.createElement('button');
+        btn.className = 'news-mehr-btn';
+        btn.textContent = 'Alle ' + news.length + ' Beiträge anzeigen';
+        btn.addEventListener('click', function () {
+          news.slice(limit).forEach(renderItem);
+          btn.remove();
+        });
+        container.appendChild(btn);
+      }
     })
     .catch(function () {
       document.getElementById('news-list').innerHTML =
