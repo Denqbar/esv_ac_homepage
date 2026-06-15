@@ -1,9 +1,7 @@
 (function () {
   var navDiv = document.getElementById('site-nav');
   var section = navDiv ? navDiv.getAttribute('data-section') : null;
-  var sectionLabel = section
-    ? '<span class="nav-section-label">' + section + '</span>'
-    : '';
+  var sectionLabel = section ? '<span class="nav-section-label"></span>' : '';
 
   var nav = '\n<nav class="site-nav">\n' +
     '  <div class="logo">\n' +
@@ -34,8 +32,13 @@
     '  <div class="footer-copy">&copy; 2026 ESV Aachen 1922 e.V.</div>\n' +
     '</footer>';
 
-  document.getElementById('site-nav').innerHTML = nav;
-  document.getElementById('site-footer').innerHTML = footer;
+  if (navDiv) { navDiv.innerHTML = nav; }
+  if (section) {
+    document.querySelector('.nav-section-label').textContent = section;
+  }
+
+  var footerDiv = document.getElementById('site-footer');
+  if (footerDiv) { footerDiv.innerHTML = footer; }
 
   var burger = document.querySelector('.nav-burger');
   var links = document.querySelector('.nav-links');
