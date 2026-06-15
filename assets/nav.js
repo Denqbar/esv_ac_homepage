@@ -3,6 +3,24 @@
   var section = navDiv ? navDiv.getAttribute('data-section') : null;
   var sectionLabel = section ? '<span class="nav-section-label"></span>' : '';
 
+  var defaultLinks =
+    '    <a href="index.html#sportarten">Sportarten</a>\n' +
+    '    <a href="index.html#vorstand">Vorstand</a>\n' +
+    '    <a href="index.html#kontakt">Kontakt</a>\n' +
+    '    <a href="satzung.html">Satzung</a>\n' +
+    '    <a href="impressum.html">Impressum</a>\n';
+
+  var customLinksAttr = navDiv ? navDiv.getAttribute('data-links') : null;
+  var linkHtml = defaultLinks;
+  if (customLinksAttr) {
+    try {
+      var customLinks = JSON.parse(customLinksAttr);
+      linkHtml = customLinks.map(function (l) {
+        return '    <a href="' + l.href + '">' + l.label + '</a>\n';
+      }).join('');
+    } catch (e) {}
+  }
+
   var nav = '\n<nav class="site-nav">\n' +
     '  <div class="logo">\n' +
     '    <a href="index.html"><img src="assets/logo.png" alt="ESV Aachen Logo"></a>\n' +
@@ -12,11 +30,7 @@
     '    <span></span><span></span><span></span>\n' +
     '  </button>\n' +
     '  <div class="nav-links">\n' +
-    '    <a href="index.html#sportarten">Sportarten</a>\n' +
-    '    <a href="index.html#vorstand">Vorstand</a>\n' +
-    '    <a href="index.html#kontakt">Kontakt</a>\n' +
-    '    <a href="satzung.html">Satzung</a>\n' +
-    '    <a href="impressum.html">Impressum</a>\n' +
+    linkHtml +
     '  </div>\n' +
     '</nav>';
 
