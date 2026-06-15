@@ -668,14 +668,54 @@ a { color: inherit; text-decoration: none; }
   margin-top: 1rem;
 }
 
+/* ── Schießen: Anlage ── */
+.anlage-section { background: var(--light); padding: 4rem 2rem; }
+.anlage-section .section-h2 { color: var(--text-on-light); }
+.anlage-inner { max-width: 1000px; margin: 0 auto; }
+.anlage-list {
+  list-style: none;
+  margin: 1.5rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.anlage-list li {
+  color: var(--text-muted-light);
+  padding-left: 1rem;
+  border-left: 2px solid var(--gold);
+}
+.anlage-list li strong { color: var(--text-on-light); }
+.anlage-foto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.anlage-foto-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.anlage-hinweis {
+  color: var(--text-muted-light);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .anlage-foto-grid { grid-template-columns: 1fr; }
+  .anlage-foto-grid img { height: 200px; }
+}
+
 /* ── Schießen: News ── */
-.news-section { background: var(--light); padding: 4rem 2rem; }
-.news-section .section-h2 { color: var(--text-on-light); }
+.news-section { background: var(--dark); padding: 4rem 2rem; }
+.news-section .section-h2 { color: var(--white); }
 .news-inner { max-width: 800px; margin: 0 auto; }
 .news-list { display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem; }
 .news-item { border-left: 3px solid var(--gold); padding-left: 1.5rem; }
 .news-date {
-  color: var(--text-muted-light);
+  color: var(--text-muted-dark);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -684,11 +724,11 @@ a { color: inherit; text-decoration: none; }
 .news-titel {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--text-on-light);
+  color: var(--white);
   margin-bottom: 0.4rem;
 }
 .news-text {
-  color: var(--text-muted-light);
+  color: var(--text-muted-dark);
   font-size: 0.93rem;
   line-height: 1.65;
 }
@@ -709,8 +749,9 @@ a { color: inherit; text-decoration: none; }
 .news-mehr-btn:hover { border-bottom-color: var(--gold); }
 
 /* ── Schießen: Wiederladen ── */
-.wiederladen-section { background: var(--dark); padding: 4rem 2rem; }
-.wiederladen-section .section-p { color: var(--text-muted-dark); }
+.wiederladen-section { background: var(--light); padding: 4rem 2rem; }
+.wiederladen-section .section-h2 { color: var(--text-on-light); }
+.wiederladen-section .section-p { color: var(--text-muted-light); }
 .wiederladen-inner { max-width: 800px; margin: 0 auto; }
 
 /* ── Schießen: Kontakt Persons ── */
