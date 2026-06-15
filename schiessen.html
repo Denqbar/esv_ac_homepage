@@ -169,6 +169,10 @@
         div.appendChild(textEl);
         container.appendChild(div);
       });
+    })
+    .catch(function () {
+      document.getElementById('news-list').innerHTML =
+        '<p style="color:var(--text-muted-light)">Aktuell keine Neuigkeiten verfügbar.</p>';
     });
 })();
 </script>
