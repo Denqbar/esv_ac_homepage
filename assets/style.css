@@ -689,3 +689,16 @@ a { color: inherit; text-decoration: none; }
 .kontakt-person { text-align: center; }
 .kontakt-name { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem; }
 .kontakt-rolle { color: var(--text-muted-dark); font-size: 0.88rem; margin-bottom: 0.5rem; }
+
+/* ── Sport Card Link ── */
+.sport-card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.sport-card-link:hover { border-bottom-color: var(--gold); }
