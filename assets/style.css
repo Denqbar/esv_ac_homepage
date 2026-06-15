@@ -575,6 +575,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Schießen: Verein ── */
 .verein-section { background: var(--light); padding: 4rem 2rem; }
+.verein-section .section-h2 { color: var(--text-on-light); }
 .verein-inner { max-width: 800px; margin: 0 auto; }
 .verein-subh {
   font-size: 1rem;
@@ -649,6 +650,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Schießen: News ── */
 .news-section { background: var(--light); padding: 4rem 2rem; }
+.news-section .section-h2 { color: var(--text-on-light); }
 .news-inner { max-width: 800px; margin: 0 auto; }
 .news-list { display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem; }
 .news-item { border-left: 3px solid var(--gold); padding-left: 1.5rem; }
@@ -673,6 +675,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Schießen: Wiederladen ── */
 .wiederladen-section { background: var(--dark); padding: 4rem 2rem; }
+.wiederladen-section .section-p { color: var(--text-muted-dark); }
 .wiederladen-inner { max-width: 800px; margin: 0 auto; }
 
 /* ── Schießen: Kontakt Persons ── */
