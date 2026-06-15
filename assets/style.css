@@ -489,11 +489,23 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.05;
 }
 .subpage-hero .sub-kicker {
-  font-size: 0.62rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.72rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+.subpage-hero .sub-kicker::before,
+.subpage-hero .sub-kicker::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--gold);
+  flex-shrink: 0;
 }
 .subpage-content {
   background: var(--light);
