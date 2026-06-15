@@ -1,42 +1,47 @@
 (function () {
-  const nav = `
-<nav class="site-nav">
-  <div class="logo">
-    <a href="index.html"><img src="assets/logo.png" alt="ESV Aachen Logo"></a>
-  </div>
-  <button class="nav-burger" aria-label="Menü öffnen" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="nav-links">
-    <a href="index.html#sportarten">Sportarten</a>
-    <a href="index.html#vorstand">Vorstand</a>
-    <a href="index.html#kontakt">Kontakt</a>
-    <a href="satzung.html">Satzung</a>
-    <a href="impressum.html">Impressum</a>
-  </div>
-</nav>`;
+  var navDiv = document.getElementById('site-nav');
+  var section = navDiv ? navDiv.getAttribute('data-section') : null;
+  var sectionLabel = section
+    ? '<span class="nav-section-label">' + section + '</span>'
+    : '';
 
-  const footer = `
-<footer class="site-footer">
-  <div class="logo">
-    <a href="index.html"><img src="assets/logo.png" alt="ESV Aachen Logo"></a>
-  </div>
-  <div class="footer-links">
-    <a href="satzung.html">Satzung</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-  </div>
-  <div class="footer-copy">© 2026 ESV Aachen 1922 e.V.</div>
-</footer>`;
+  var nav = '\n<nav class="site-nav">\n' +
+    '  <div class="logo">\n' +
+    '    <a href="index.html"><img src="assets/logo.png" alt="ESV Aachen Logo"></a>\n' +
+    '  </div>\n' +
+    sectionLabel + '\n' +
+    '  <button class="nav-burger" aria-label="Menü öffnen" aria-expanded="false">\n' +
+    '    <span></span><span></span><span></span>\n' +
+    '  </button>\n' +
+    '  <div class="nav-links">\n' +
+    '    <a href="index.html#sportarten">Sportarten</a>\n' +
+    '    <a href="index.html#vorstand">Vorstand</a>\n' +
+    '    <a href="index.html#kontakt">Kontakt</a>\n' +
+    '    <a href="satzung.html">Satzung</a>\n' +
+    '    <a href="impressum.html">Impressum</a>\n' +
+    '  </div>\n' +
+    '</nav>';
+
+  var footer = '\n<footer class="site-footer">\n' +
+    '  <div class="logo">\n' +
+    '    <a href="index.html"><img src="assets/logo.png" alt="ESV Aachen Logo"></a>\n' +
+    '  </div>\n' +
+    '  <div class="footer-links">\n' +
+    '    <a href="satzung.html">Satzung</a>\n' +
+    '    <a href="impressum.html">Impressum</a>\n' +
+    '    <a href="datenschutz.html">Datenschutz</a>\n' +
+    '  </div>\n' +
+    '  <div class="footer-copy">&copy; 2026 ESV Aachen 1922 e.V.</div>\n' +
+    '</footer>';
 
   document.getElementById('site-nav').innerHTML = nav;
   document.getElementById('site-footer').innerHTML = footer;
 
-  const burger = document.querySelector('.nav-burger');
-  const links = document.querySelector('.nav-links');
+  var burger = document.querySelector('.nav-burger');
+  var links = document.querySelector('.nav-links');
 
   burger.addEventListener('click', function () {
-    const open = links.classList.toggle('open');
+    var open = links.classList.toggle('open');
     burger.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', open);
   });
