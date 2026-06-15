@@ -572,3 +572,117 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) {
   .nav-section-label { display: none; }
 }
+
+/* ── Schießen: Verein ── */
+.verein-section { background: var(--light); padding: 4rem 2rem; }
+.verein-inner { max-width: 800px; margin: 0 auto; }
+.verein-subh {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-on-light);
+  margin: 2rem 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.disziplinen-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.disziplin-tag {
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+/* ── Schießen: Training ── */
+.training-section { background: var(--dark); padding: 4rem 2rem; }
+.training-inner { max-width: 900px; margin: 0 auto; }
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.training-card {
+  background: var(--dark-2);
+  border-top: 3px solid var(--gold);
+  padding: 1.5rem;
+}
+.training-day {
+  color: var(--gold);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.training-time {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.training-info {
+  color: var(--text-muted-dark);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.training-anlage { margin-top: 2.5rem; }
+.training-anlage-list {
+  list-style: none;
+  margin: 0.75rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.training-anlage-list li {
+  color: var(--text-muted-dark);
+  padding-left: 1rem;
+  border-left: 2px solid var(--gold);
+}
+.training-anlage-list li strong { color: #fff; }
+.training-hinweis {
+  color: var(--text-muted-dark);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* ── Schießen: News ── */
+.news-section { background: var(--light); padding: 4rem 2rem; }
+.news-inner { max-width: 800px; margin: 0 auto; }
+.news-list { display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem; }
+.news-item { border-left: 3px solid var(--gold); padding-left: 1.5rem; }
+.news-date {
+  color: var(--text-muted-light);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.25rem;
+}
+.news-titel {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-on-light);
+  margin-bottom: 0.4rem;
+}
+.news-text {
+  color: var(--text-muted-light);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+/* ── Schießen: Wiederladen ── */
+.wiederladen-section { background: var(--dark); padding: 4rem 2rem; }
+.wiederladen-inner { max-width: 800px; margin: 0 auto; }
+
+/* ── Schießen: Kontakt Persons ── */
+.kontakt-persons {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0 1.5rem;
+}
+.kontakt-person { text-align: center; }
+.kontakt-name { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem; }
+.kontakt-rolle { color: var(--text-muted-dark); font-size: 0.88rem; margin-bottom: 0.5rem; }
