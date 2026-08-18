@@ -16,7 +16,8 @@
     try {
       var customLinks = JSON.parse(customLinksAttr);
       linkHtml = customLinks.map(function (l) {
-        return '    <a href="' + l.href + '">' + l.label + '</a>\n';
+        var attrs = l.external ? ' target="_blank" rel="noopener"' : '';
+        return '    <a href="' + l.href + '"' + attrs + '>' + l.label + '</a>\n';
       }).join('');
     } catch (e) {}
   }
