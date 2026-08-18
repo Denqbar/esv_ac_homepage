@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schießen – ESV Aachen 1922 e.V.</title>
   <meta name="description" content="Sportschützen beim ESV Aachen 1922 e.V. – Trainingszeiten, Disziplinen, Aktuelles und Kontakt.">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
-<div id="site-nav" data-links='[{"href":"index.html","label":"← Startseite"},{"href":"#verein","label":"Verein"},{"href":"#training","label":"Training"},{"href":"#anlage","label":"Anlage"},{"href":"#news","label":"News"},{"href":"#wiederladen","label":"Wiederladen"},{"href":"#kontakt","label":"Kontakt"},{"href":"https://schiessen.esv-aachen.de","label":"Mitgliederportal ↗","external":true}]'></div>
+<div id="site-nav" data-links='[{"href":"/","label":"← Startseite"},{"href":"#verein","label":"Verein"},{"href":"#training","label":"Training"},{"href":"#anlage","label":"Anlage"},{"href":"#news","label":"News"},{"href":"#wiederladen","label":"Wiederladen"},{"href":"#kontakt","label":"Kontakt"},{"href":"https://schiessen.esv-aachen.de","label":"Mitgliederportal ↗","external":true}]'></div>
 
 <main>
 
 <div style="background:var(--dark);position:relative;overflow:hidden;">
-  <div class="hero-bg" style="background-image:url('assets/schiessen-hero.jpg');background-position:center top;"></div>
+  <div class="hero-bg" style="background-image:url('/assets/schiessen-hero.jpg');background-position:center top;"></div>
   <div class="hero-line"></div>
   <div class="hero-line-2"></div>
   <div class="subpage-hero">
@@ -97,9 +97,9 @@
       <li><strong>Vereinsheim</strong> — Sozialraum für Mitglieder</li>
     </ul>
     <div class="anlage-foto-grid">
-      <img src="assets/anlage-bahn25.jpg" alt="25-Meter-Stand">
-      <img src="assets/anlage-bahn50.jpg" alt="50-Meter-Stand">
-      <img src="assets/anlage-vereinsheim.jpg" alt="Vereinsheim">
+      <img src="/assets/anlage-bahn25.jpg" alt="25-Meter-Stand">
+      <img src="/assets/anlage-bahn50.jpg" alt="50-Meter-Stand">
+      <img src="/assets/anlage-vereinsheim.jpg" alt="Vereinsheim">
     </div>
     <p class="anlage-hinweis">Gastschützen sind jederzeit willkommen. Für viele Disziplinen stehen Vereinswaffen zum Verleih bereit; Munition zum Verbrauch auf dem Stand kann beim Schießleiter erworben werden. Für jeden Schützen – ob Mitglied oder Gast – besteht Versicherungspflicht. Bitte melden Sie sich vor dem Schießen beim Schießleiter an und nach dem Schießen wieder ab. Den Anweisungen des Standpersonals ist stets Folge zu leisten.</p>
   </div>
@@ -156,7 +156,7 @@
 
 <button id="back-to-top" aria-label="Zurück nach oben" title="Zurück nach oben">&#8679;</button>
 
-<script src="assets/nav.js"></script>
+<script src="/assets/nav.js"></script>
 <script>
 (function () {
   var btn = document.getElementById('back-to-top');
@@ -167,7 +167,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  fetch('assets/schiessen-news.json')
+  fetch('/assets/schiessen-news.json')
     .then(function (r) { return r.json(); })
     .then(function (news) {
       var container = document.getElementById('news-list');
