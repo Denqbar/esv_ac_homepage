@@ -361,7 +361,8 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.2s;
 }
 .sport-card:hover { transform: translateY(-5px); }
-.sport-icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+.sport-icon { display: block; margin-bottom: 14px; }
+.sport-icon svg { width: 32px; height: 32px; color: var(--gold); display: block; }
 .sport-name {
   font-size: 1.05rem;
   font-weight: 800;
