@@ -101,6 +101,11 @@
       <img src="/assets/anlage-bahn50.jpg" alt="50-Meter-Stand">
       <img src="/assets/anlage-vereinsheim.jpg" alt="Vereinsheim">
     </div>
+
+    <div id="foto-lightbox" class="foto-lightbox">
+      <button class="foto-lightbox-close" aria-label="Schließen">&times;</button>
+      <img src="" alt="">
+    </div>
     <p class="anlage-hinweis">Neugierige und Gastschützen sind bei uns herzlich willkommen. Da uns Sicherheit und ein reibungsloser Ablauf wichtig sind, ist eine vorherige Absprache mit uns Voraussetzung für die Teilnahme – spontanes Mitschießen ist leider nicht möglich. Meldet euch gerne vorab bei uns, wir finden gemeinsam einen passenden Termin.</p>
     <p class="anlage-hinweis">Für viele Disziplinen stellen wir moderne, hochwertige Vereinswaffen zum Verleih bereit; Munition zum Verbrauch auf dem Stand kann vor Ort erworben werden.</p>
   </div>
@@ -166,6 +171,21 @@
   }, { passive: true });
   btn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  var lightbox = document.getElementById('foto-lightbox');
+  var lightboxImg = lightbox.querySelector('img');
+  document.querySelectorAll('.anlage-foto-grid img').forEach(function (thumb) {
+    thumb.addEventListener('click', function () {
+      lightboxImg.src = thumb.src;
+      lightboxImg.alt = thumb.alt;
+      lightbox.classList.add('active');
+    });
+  });
+  function closeLightbox() { lightbox.classList.remove('active'); }
+  lightbox.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
   });
 
   fetch('/assets/schiessen-news.md')
