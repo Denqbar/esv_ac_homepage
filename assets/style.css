@@ -238,12 +238,12 @@ a { color: inherit; text-decoration: none; }
 .hero-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 0.62rem;
+  gap: 14px;
+  font-size: 0.72rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 .hero-kicker::before {
   content: '';
