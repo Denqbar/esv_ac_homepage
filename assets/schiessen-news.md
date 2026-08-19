@@ -26,7 +26,12 @@ Text des Eintrags als normaler Absatz.
 👇 **Alles oberhalb dieser Zeile ist nur Anleitung. Neue Einträge fügst du direkt unterhalb der folgenden Trennlinie ein — also genau hier, oberhalb des ersten bestehenden Eintrags:**
 
 ---
+## Neuer Look für unsere Website!
+2026-08-19
 
+Passend zu unserem neuen Logo hat auch unsere Homepage ein Redesign bekommen. Ab sofort präsentiert sich unser Netzauftritt in einem frischen, modernen Gewand – übersichtlicher und optimiert für alle Geräte. Schaut euch um und entdeckt das neue Design!
+
+---
 ## Lehrgang: Wiederladen & Vorderladen – 12./13. September 2026
 2026-06-15
 
