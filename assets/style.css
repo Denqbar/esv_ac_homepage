@@ -16,6 +16,7 @@ a { color: inherit; text-decoration: none; }
   --dark-2:  #1a1a1a;
   --light:   #f5f5f2;
   --gold:    #F4BB19;
+  --gold-on-light: #8C6900;
   --white:   #ffffff;
   --text-on-light: #1a1a1a;
   --text-muted-dark: rgba(255,255,255,0.55);
@@ -82,7 +83,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Abschnitt-Typografie ── */
 .section-eyebrow {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
@@ -309,6 +310,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
 }
 .about .section-h2 { color: var(--text-on-light); }
+.about .section-eyebrow { color: var(--gold-on-light); }
 .about .section-p { color: var(--text-muted-light); }
 .about-img-wrap {
   position: relative;
@@ -395,6 +397,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 48px;
 }
 .vorstand-header .section-h2 { color: var(--text-on-light); }
+.vorstand-header .section-eyebrow { color: var(--gold-on-light); }
 .board-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -597,6 +600,7 @@ a { color: inherit; text-decoration: none; }
 /* ── Schießen: Verein ── */
 .verein-section { background: var(--light); padding: 4rem 2rem; }
 .verein-section .section-h2 { color: var(--text-on-light); }
+.verein-section .section-eyebrow { color: var(--gold-on-light); }
 .verein-inner { max-width: 800px; margin: 0 auto; }
 .verein-subh {
   font-size: 1rem;
@@ -672,6 +676,7 @@ a { color: inherit; text-decoration: none; }
 /* ── Schießen: Anlage ── */
 .anlage-section { background: var(--light); padding: 4rem 2rem; }
 .anlage-section .section-h2 { color: var(--text-on-light); }
+.anlage-section .section-eyebrow { color: var(--gold-on-light); }
 .anlage-inner { max-width: 1000px; margin: 0 auto; }
 .anlage-list {
   list-style: none;
@@ -752,6 +757,7 @@ a { color: inherit; text-decoration: none; }
 /* ── Schießen: Wiederladen ── */
 .wiederladen-section { background: var(--light); padding: 4rem 2rem; }
 .wiederladen-section .section-h2 { color: var(--text-on-light); }
+.wiederladen-section .section-eyebrow { color: var(--gold-on-light); }
 .wiederladen-section .section-p { color: var(--text-muted-light); }
 .wiederladen-inner { max-width: 800px; margin: 0 auto; }
 
