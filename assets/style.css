@@ -52,7 +52,7 @@ a { color: inherit; text-decoration: none; }
   width: 2px;
   background: rgba(232,168,0,0.35);
 }
-.site-nav .logo img { height: 94px; width: auto; }
+.site-nav .logo img { height: 124px; width: auto; }
 .nav-links { display: flex; gap: 32px; align-items: center; }
 .nav-links a {
   color: var(--text-muted-dark);
