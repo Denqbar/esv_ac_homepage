@@ -215,9 +215,21 @@ a { color: inherit; text-decoration: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('schwimmer.jpg')
-              center / cover no-repeat;
+}
+.hero-bg-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+.hero-bg-slide.active {
   opacity: 0.18;
+}
+.hero-bg-slide.no-transition {
+  transition: none;
 }
 .hero-line {
   position: absolute;
