@@ -2,7 +2,7 @@
 
 Dieser Abschnitt hier oben (bis zur ersten Trennlinie `---`) ist nur eine Anleitung und erscheint **nicht** auf der Website.
 
-**Neuen Eintrag hinzufügen:** Kopiere den folgenden Block, füge ihn direkt unterhalb dieser Anleitung ein (vor dem ersten echten Eintrag) und passe die Inhalte an:
+**Neuen Eintrag hinzufügen:** Kopiere den folgenden Block und passe die Inhalte an. Wo genau er hin muss, steht ganz unten in dieser Anleitung markiert.
 
 ```
 ## Titel des Eintrags
@@ -22,6 +22,8 @@ Text des Eintrags als normaler Absatz.
 - Es werden maximal 5 Einträge direkt angezeigt, der Rest erscheint über den "Alle Beiträge anzeigen"-Button.
 
 Änderungen kannst du direkt hier im GitHub-Web-Editor speichern (Button "Commit changes …"). Falls du keinen Schreibzugriff auf dieses Repo hast, schlägt GitHub automatisch vor, die Änderung als Pull Request einzureichen — das ist der normale Weg.
+
+👇 **Alles oberhalb dieser Zeile ist nur Anleitung. Neue Einträge fügst du direkt unterhalb der folgenden Trennlinie ein — also genau hier, oberhalb des ersten bestehenden Eintrags:**
 
 ---
 
