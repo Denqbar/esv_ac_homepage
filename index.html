@@ -71,7 +71,7 @@
     <h2 class="section-h2">Unsere Sportarten</h2>
   </div>
   <div class="sport-grid">
-    <div class="sport-card">
+    <div class="sport-card" data-href="/schiessen/">
       <span class="sport-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
           <circle cx="12" cy="12" r="8.5"/>
@@ -234,6 +234,14 @@
   }, { passive: true });
   btn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+(function () {
+  document.querySelectorAll('.sport-card[data-href]').forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      window.location.href = card.dataset.href;
+    });
   });
 })();
 </script>
