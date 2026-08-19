@@ -168,9 +168,19 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  fetch('/assets/schiessen-news.json')
-    .then(function (r) { return r.json(); })
-    .then(function (news) {
+  fetch('/assets/schiessen-news.md')
+    .then(function (r) { return r.text(); })
+    .then(function (md) {
+      var news = md.trim().split(/\n-{3,}\n/)
+        .map(function (block) { return block.trim().split('\n'); })
+        .filter(function (lines) { return lines[0].indexOf('## ') === 0; })
+        .map(function (lines) {
+          return {
+            titel: lines[0].replace(/^#+\s*/, '').trim(),
+            datum: lines[1].trim(),
+            text: lines.slice(2).join('\n').trim()
+          };
+        });
       var container = document.getElementById('news-list');
       var limit = 5;
 
