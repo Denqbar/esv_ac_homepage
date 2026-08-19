@@ -215,6 +215,7 @@ a { color: inherit; text-decoration: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
+  pointer-events: none;
 }
 .hero-bg-slide {
   position: absolute;
