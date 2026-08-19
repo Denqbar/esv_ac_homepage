@@ -15,10 +15,10 @@
 
 <section class="hero">
   <div class="hero-bg">
-    <div class="hero-bg-slide" style="background-image:url('/assets/schwimmer.jpg')"></div>
-    <div class="hero-bg-slide" style="background-image:url('/assets/schuetze-hero-home.jpg')"></div>
-    <div class="hero-bg-slide" style="background-image:url('/assets/fussballer-hero.jpg')"></div>
-    <div class="hero-bg-slide" style="background-image:url('/assets/tennisspieler-hero.jpg')"></div>
+    <div class="hero-bg-slide" data-bg="/assets/schwimmer.jpg"></div>
+    <div class="hero-bg-slide" data-bg="/assets/schuetze-hero-home.jpg"></div>
+    <div class="hero-bg-slide" data-bg="/assets/fussballer-hero.jpg"></div>
+    <div class="hero-bg-slide" data-bg="/assets/tennisspieler-hero.jpg"></div>
   </div>
   <div class="hero-line"></div>
   <div class="hero-line-2"></div>
@@ -200,10 +200,24 @@
 (function () {
   const slides = document.querySelectorAll('.hero-bg-slide');
   if (!slides.length) return;
+
+  function loadBg(slide) {
+    if (slide.dataset.bg) {
+      slide.style.backgroundImage = "url('" + slide.dataset.bg + "')";
+      delete slide.dataset.bg;
+    }
+  }
+
   let current = Math.floor(Math.random() * slides.length);
+  loadBg(slides[current]);
   slides[current].classList.add('no-transition', 'active');
   void slides[current].offsetWidth;
   slides[current].classList.remove('no-transition');
+
+  function loadRest() { slides.forEach(loadBg); }
+  if (document.readyState === 'complete') loadRest();
+  else window.addEventListener('load', loadRest);
+
   if (slides.length < 2) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   setInterval(function () {
