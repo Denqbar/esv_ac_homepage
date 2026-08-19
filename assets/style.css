@@ -435,7 +435,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-on-light);
 }
 @media (max-width: 600px) {
   .board-grid { grid-template-columns: 1fr; max-width: 280px; }
