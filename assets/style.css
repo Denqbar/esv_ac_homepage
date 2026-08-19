@@ -179,7 +179,7 @@ a { color: inherit; text-decoration: none; }
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .site-nav { padding: 12px 20px; flex-wrap: nowrap; }
-  .site-nav .logo img { height: 60px; }
+  .site-nav .logo img { height: 83px; }
   .nav-burger { display: flex; }
   .nav-links {
     display: none;
