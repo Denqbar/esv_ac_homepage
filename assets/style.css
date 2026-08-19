@@ -456,7 +456,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Kontakt ── */
 .kontakt {
-  background: var(--dark-2);
+  background: var(--dark);
   padding: 80px 48px;
   text-align: center;
 }
